@@ -1,41 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
-  --primary-color: #8aa29e;
+  --primary-color: #667875;
   --secondary-color: #f1edee;
   --tertiary-color: #686963;
   --quaternary-color: #db5461;
   --color-five: #3d5467;
+  --font-family: 'Roboto', sans-serif;
 }
 
 * {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* container application */
 .container {
   margin: 0 auto;
-  margin-top: 15vh;
   max-width: 80%;
-  padding: 20px;
-  background-color: rgba(104, 105, 99, 0.7);
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.62);
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Optional: to stack elements vertically */
+  flex-direction: column; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Generate a random password */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+/* Never use an insecure... */
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
 }
 
 /* button styling */
 button {
   background-color: var(--quaternary-color);
   color: var(--secondary-color);
-  padding: 15px 15px;
+  padding: 15px 30px;
   font-size: 1rem;
   border: none;
   border-radius: 10px;
@@ -43,16 +67,12 @@ button {
   margin-top: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* random password text */
-h2 {
-  margin-top: 10px;
-}
-
-/* Never use an insecure */
-p {
-  margin-top: 10px;
+button:hover {
+  background-color: #c13b4f;
+  transform: scale(1.05);
 }
 
 /* copy img styling */
@@ -60,12 +80,12 @@ p {
   width: 30px;
   margin-left: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .clipBoard:hover {
   transform: scale(1.1);
-  transition: all 0.3s ease;
-} 
+}
 
 /* Result 1 container */
 .result-container {
@@ -74,8 +94,9 @@ p {
   align-items: center;
   margin-top: 20px;
   padding: 20px;
-  background-color: rgba(104, 105, 99, 0.7);
+  background-color: var(--color-five);
   border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Checkbox styling */
