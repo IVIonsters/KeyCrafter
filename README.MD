@@ -41,7 +41,7 @@ Once the project is opened in your browser, you can use the KeyCrafter applicati
 
 ## **Screenshots**
 
-| ![KeyCrafter on Desktop](./images/Macbook-PRO-16-2021-127.0.0.1.png) | ![KeyCrafter on Mobile](./images/iPhone-15-PRO-MAX-127.0.0.1.png) |
+| <img src="./images/Macbook-PRO-16-2021-127.0.0.1.png" width="400"> | <img src="./images/iPhone-15-PRO-MAX-127.0.0.1.png" width="200"> |
 |:--------------------------------------------------:|:------------------------------------------------:|
 | KeyCrafter on Desktop                              | KeyCrafter on Mobile                             |
 
