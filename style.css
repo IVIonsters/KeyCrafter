@@ -41,6 +41,8 @@ button {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* random password text */
@@ -57,7 +59,13 @@ p {
 .clipBoard {
   width: 30px;
   margin-left: 10px;
+  cursor: pointer;
 }
+
+.clipBoard:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+} 
 
 /* Result 1 container */
 .result-container {
@@ -70,13 +78,3 @@ p {
   border-radius: 10px;
 }
 
-/* Result 2 container */
-.result2-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #686963b0;
-  border-radius: 10px;
-}
