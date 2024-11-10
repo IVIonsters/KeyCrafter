@@ -3,7 +3,7 @@ const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+";
-const passwordLength = 14;
+let passwordLength = document.getElementById("passwordLength").value;
 
 // Variable to combine all characters
 const addCharacters = upperCase + lowerCase + numbers + symbols;
@@ -11,21 +11,43 @@ const addCharacters = upperCase + lowerCase + numbers + symbols;
 // DOM elements
 const passwordOne = document.getElementById("passwordOne");
 
+// Update password length when slider changes
+document.getElementById("passwordLength").addEventListener("input", function() {
+  passwordLength = this.value;
+  document.getElementById("sliderValue").textContent = passwordLength;
+});
+
 // Generate password function
 function generatePassword() {
   let password = ""; // Reset password variable
-  // Math.random to generate, Math.floor to round down
-  password += upperCase[Math.floor(Math.random() * upperCase.length)];
-  password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  password += numbers[Math.floor(Math.random() * numbers.length)];
-  password += symbols[Math.floor(Math.random() * symbols.length)];
+  let addCharacters = ""; // Reset addCharacters variable
+
+  // Check which options are selected
+  if (document.getElementById("includeUpperCase").checked) {
+    addCharacters += upperCase;
+    password += upperCase[Math.floor(Math.random() * upperCase.length)];
+  }
+  if (document.getElementById("includeLowerCase").checked) {
+    addCharacters += lowerCase;
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  }
+  if (document.getElementById("includeNumbers").checked) {
+    addCharacters += numbers;
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+  }
+  if (document.getElementById("includeSymbols").checked) {
+    addCharacters += symbols;
+    password += symbols[Math.floor(Math.random() * symbols.length)];
+  }
+
   // For loop to generate password
-  for (let i = 0; i < passwordLength; i++) {
+  for (let i = password.length; i < passwordLength; i++) {
     password += addCharacters[Math.floor(Math.random() * addCharacters.length)];
   }
   passwordOne.textContent = password; // Update the DOM element
   return password;
 }
+
 
 // Copy password function
 function copyPassword() {
