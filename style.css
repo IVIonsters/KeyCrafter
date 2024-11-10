@@ -1,20 +1,20 @@
 :root {
-    --primary-color: #8AA29E;
-    --secondary-color: #F1EDEE;
-    --tertiary-color: #686963;
-    --quaternary-color: #DB5461;
-    --color-five: #3D5467;
+  --primary-color: #8aa29e;
+  --secondary-color: #f1edee;
+  --tertiary-color: #686963;
+  --quaternary-color: #db5461;
+  --color-five: #3d5467;
 }
 
 * {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #8AA29E;
-    color: #F1EDEE;
+  background-color: #8aa29e;
+  color: #f1edee;
 }
 
 /* container application */
@@ -33,33 +33,48 @@ body {
 
 /* button styling */
 button {
-  background-color: #DB5461;
-  color: #F1EDEE;
-  padding: 10px 10px;
+  background-color: #db5461;
+  color: #f1edee;
+  padding: 15px 15px;
+  font-size: 1rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 20px;
 }
 
+/* random password text */
 h2 {
-    margin-top: 20px;
+  margin-top: 10px;
 }
 
+/* Never use an insecure */
 p {
-    margin-top: 20px;
+  margin-top: 10px;
+}
+
+/* copy img styling */
+.clipBoard {
+  width: 30px;
+  margin-left: 10px;
 }
 
 /* Result 1 container */
 .result-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #686963b0;
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #686963b0;
+  border-radius: 10px;
 }
 
 /* Result 2 container */
 .result2-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   padding: 20px;
   background-color: #686963b0;
