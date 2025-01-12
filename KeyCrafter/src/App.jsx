@@ -1,5 +1,6 @@
 import './App.css'
-
+import CheckBoxGroup from './components/CheckboxGroup'
+import PasswordGenerator from './components/PasswordGenerator'
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
           className="w-full max-w-md bg-white/40 backdrop-blur-lg p-6 rounded-xl shadow-2xl flex flex-col items-center text-center space-y-4 border border-gray-300/60"
         >
           <h1 className="text-3xl font-extrabold text-gray-900">Password Generator</h1>
+          <CheckBoxGroup />
+          <PasswordGenerator />
         </section>
       </body >
     </>
