@@ -1,6 +1,7 @@
 # **KeyCrafter**
 
 ## **Table of Contents**
+
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Installation](#installation)
@@ -10,14 +11,22 @@
 - [License](#license)
 
 ## **Project Overview**
-KeyCrafter is a web application that allows users to generate secure random passwords. It provides a user-friendly interface to customize the password generation process, including options for uppercase letters, lowercase letters, numbers, and symbols.
+
+KeyCrafter is a feature-rich password generator designed to create secure and customizable passwords. This application offers a dynamic and interactive interface to enhance user experience, providing tools to tailor password complexity to individual preferences.
 
 ## **Features**
-- Responsive design optimized for mobile and desktop devices.
-- Customizable password generation with options for uppercase, lowercase, numbers, and symbols.
-- Real-time password length adjustment using a slider.
+
+- Responsive design optimized for both mobile and desktop devices.
+- Customizable password generation with options for:
+  - Uppercase letters
+  - Lowercase letters
+  - Numbers
+  - Special characters
+- Adjustable password length (8–32 characters) with real-time validation.
 - Copy generated password to clipboard with a single click.
-- Modern UI components for a clean and engaging user experience.
+- Password strength indicator that dynamically assesses quality based on length and character diversity.
+- Avoids consecutive duplicate characters for improved security.
+- Modern, clean UI components built with Tailwind CSS.
 
 ## **Installation**
 
@@ -26,26 +35,30 @@ KeyCrafter is a web application that allows users to generate secure random pass
 - Open `index.html` in your preferred web browser.
 
 ## **Usage**
-Once the project is opened in your browser, you can use the KeyCrafter application to generate secure passwords.
 
-- Select the desired options for uppercase, lowercase, numbers, and symbols.
-- Adjust the password length using the slider.
-- Click the "KeyCrafter Unlocked" button to generate a password.
-- Click the copy icon to copy the generated password to the clipboard.
+1. Open `index.html` in your browser.
+2. Customize the password options:
+   - Enable or disable character types (uppercase, lowercase, numbers, special characters).
+   - Adjust the password length using the input field.
+3. Click the **"Generate Password"** button to create a secure password.
+4. Use the **"Copy to Clipboard"** button to copy the password for easy use.
+5. Monitor the password strength via the integrated strength indicator.
 
 ## **Technologies Used**
 
 - ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white) - Used for structuring the web page.
 - ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white) - Used for styling components.
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) - Used for interactivity and logic implementation.
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) - Used for modern and responsive UI design.
 
 ## **Screenshots**
 
-| <img src="./images/Macbook-PRO-16-2021-127.0.0.1.png" width="400"> | <img src="./images/iPhone-15-PRO-MAX-127.0.0.1.png" width="200"> |
-|:--------------------------------------------------:|:------------------------------------------------:|
-| KeyCrafter on Desktop                              | KeyCrafter on Mobile                             |
+| <img src="./images/macbookPro.png" width="400"> | <img src="./images/16ProMax.png" width="200"> |
+| :----------------------------------------------------------------: | :--------------------------------------------------------------: |
+|                       KeyCrafter on Desktop                        |                       KeyCrafter on Mobile                       |
 
 ## **License**
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <!-- IVIonsters Designs -->
