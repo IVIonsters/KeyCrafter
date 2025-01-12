@@ -1,0 +1,39 @@
+/* Base Styles for the Progress Bar */
+progress {
+  width: 100%;
+  /* Full width */
+  height: 1rem;
+  /* Equivalent to h-4 in Tailwind */
+  appearance: none;
+  /* Remove default browser styling */
+  border-radius: 0.5rem;
+  /* Rounded corners (rounded in Tailwind) */
+  background-color: #e5e7eb;
+  /* Default Tailwind Gray-300 */
+}
+
+/* Webkit (Chrome, Edge, Safari) Progress Bar */
+progress::-webkit-progress-bar {
+  border-radius: 0.5rem;
+  /* Match the rounded corners */
+}
+
+/* Webkit (Chrome, Edge, Safari) Progress Value (filled portion) */
+progress::-webkit-progress-value {
+  background-color: var(--tw-bg-color, #10b981);
+  /* Default Tailwind Green-500 */
+  transition: width 0.3s ease;
+  /* Smooth animation */
+  border-radius: 0.5rem;
+  /* Rounded corners for the filled portion */
+}
+
+/* Firefox Progress Value */
+progress::-moz-progress-bar {
+  background-color: var(--tw-bg-color, #10b981);
+  /* Use variable or default */
+  transition: width 0.3s ease;
+  /* Smooth animation */
+  border-radius: 0.5rem;
+  /* Match rounded corners */
+}
