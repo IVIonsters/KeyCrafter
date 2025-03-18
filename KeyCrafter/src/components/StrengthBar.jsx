@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import react from 'react';
+import { useState } from 'react';
 
-function strengthBar() {
+function StrengthBar() {
   return (
     <div id="strengthIndicator">
       <p>
@@ -16,7 +16,7 @@ function strengthBar() {
         className="w-full"
       ></progress>
     </div>
-  )
+  );
 }
 
-export default strengthBar;
+export default StrengthBar;

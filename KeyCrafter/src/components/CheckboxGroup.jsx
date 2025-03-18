@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import react from 'react';
+import react, { useState } from 'react';
 
-function checkBoxGroup() {
+function CheckboxGroup() {
   return (
     <div className="space-y-2 w-full">
       <label
@@ -11,7 +11,7 @@ function checkBoxGroup() {
           type="checkbox"
           id="includelowerCase"
           className="charOption h-5 w-5 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
-          checked
+          defaultChecked
         />
         <span className="text-gray-800 font-medium">Lowercase</span>
       </label>
@@ -49,4 +49,4 @@ function checkBoxGroup() {
   );
 }
 
-export default checkBoxGroup;
+export default CheckboxGroup;
