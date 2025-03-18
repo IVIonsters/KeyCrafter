@@ -3,47 +3,50 @@ import react, { useState } from 'react';
 
 function CheckboxGroup() {
   return (
-    <div className="space-y-2 w-full">
+    <div className="grid grid-cols-2 gap-3 w-full">
       <label
-        className="flex items-center space-x-2 transition-transform duration-300 hover:scale-105"
+        className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200"
       >
         <input
           type="checkbox"
-          id="includelowerCase"
-          className="charOption h-5 w-5 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
+          id="includelowercase"
+          className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
           defaultChecked
         />
-        <span className="text-gray-800 font-medium">Lowercase</span>
+        <span className="text-gray-800">Lowercase (a-z)</span>
       </label>
+
       <label
-        className="flex items-center space-x-2 transition-transform duration-300 hover:scale-105"
+        className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200"
       >
         <input
           type="checkbox"
-          id="includeupperCase"
-          className="charOption h-5 w-5 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
+          id="includeuppercase"
+          className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800 font-medium">Uppercase</span>
+        <span className="text-gray-800">Uppercase (A-Z)</span>
       </label>
+
       <label
-        className="flex items-center space-x-2 transition-transform duration-300 hover:scale-105"
+        className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200"
       >
         <input
           type="checkbox"
           id="includenumbers"
-          className="charOption h-5 w-5 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
+          className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800 font-medium">Numbers</span>
+        <span className="text-gray-800">Numbers (0-9)</span>
       </label>
+
       <label
-        className="flex items-center space-x-2 transition-transform duration-300 hover:scale-105"
+        className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-200"
       >
         <input
           type="checkbox"
-          id="includespecialCharacters"
-          className="charOption h-5 w-5 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
+          id="includespecialcharacters"
+          className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800 font-medium">Special Characters</span>
+        <span className="text-gray-800">Symbols (!@#$)</span>
       </label>
     </div>
   );

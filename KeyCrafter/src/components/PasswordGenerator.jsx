@@ -3,29 +3,27 @@ import { useState } from 'react';
 
 function PasswordGenerator() {
   return (
-    <>
-      <div className="w-full">
-        <label
-          htmlFor="passwordLength"
-          className="block text-sm font-semibold text-gray-800"
-        >
-          Password Length:
-        </label>
-        <input
-          type="number"
-          defaultValue="12"
-          id="passwordLength"
-          className="w-full p-2 mt-1 text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-400 focus:outline-none"
-        />
-      </div>
-      <button
-        id="generateBtn"
-        className="w-full py-2 px-4 bg-emerald-400 text-white font-semibold rounded-lg shadow-lg hover:bg-emerald-500 focus:ring-2 focus:ring-emerald-400 focus:outline-none transform hover:scale-105 transition-transform duration-300"
-      // React requires style to be an object like style={{textShadow: "1px 1px 2px rgba(0, 0, 0, 0.6)"}}
+    <div className="w-full">
+      <label
+        htmlFor="passwordLength"
+        className="flex justify-between items-center text-sm font-semibold text-gray-800"
       >
-        Generate Password
-      </button>
-    </>
+        <span>Password Length</span>
+        <output className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">12</output>
+      </label>
+      <input
+        type="range"
+        min="4"
+        max="64"
+        defaultValue="12"
+        id="passwordLength"
+        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mt-2 accent-teal-500"
+      />
+      <div className="flex justify-between text-xs text-gray-500 mt-1">
+        <span>4</span>
+        <span>64</span>
+      </div>
+    </div>
   );
 }
 
