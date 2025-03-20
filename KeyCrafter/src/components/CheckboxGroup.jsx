@@ -13,7 +13,7 @@ function CheckboxGroup() {
           className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
           defaultChecked
         />
-        <span className="text-gray-800">Lowercase (a-z)</span>
+        <span className="text-gray-800 text-sm">Lowercase (a-z)</span>
       </label>
 
       <label
@@ -24,7 +24,7 @@ function CheckboxGroup() {
           id="includeuppercase"
           className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800">Uppercase (A-Z)</span>
+        <span className="text-gray-800 text-sm">Uppercase (A-Z)</span>
       </label>
 
       <label
@@ -35,7 +35,7 @@ function CheckboxGroup() {
           id="includenumbers"
           className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800">Numbers (0-9)</span>
+        <span className="text-gray-800 text-sm">Numbers (0-9)</span>
       </label>
 
       <label
@@ -46,7 +46,7 @@ function CheckboxGroup() {
           id="includespecialcharacters"
           className="h-4 w-4 rounded border-gray-300 accent-teal-500 focus:ring-teal-400"
         />
-        <span className="text-gray-800">Symbols (!@#$)</span>
+        <span className="text-gray-800 text-sm">Symbols (!@#$)</span>
       </label>
     </div>
   );
