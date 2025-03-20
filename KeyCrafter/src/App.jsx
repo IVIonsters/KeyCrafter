@@ -1,21 +1,19 @@
 import './App.css'
-
+import PasswordGenerator from './components/PasswordGenerator'
 
 function App() {
-
   return (
-    <>
-      <body
-        className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex items-center justify-center p-4"
-      >
-        <section
-          className="w-full max-w-md bg-white/40 backdrop-blur-lg p-6 rounded-xl shadow-2xl flex flex-col items-center text-center space-y-4 border border-gray-300/60"
-        >
-          <h1 className="text-3xl font-extrabold text-gray-900">Password Generator</h1>
-        </section>
-      </body >
-    </>
-  )
+    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen flex items-center justify-center p-4">
+      <section className="w-full max-w-md bg-white/80 backdrop-blur-lg p-8 rounded-xl shadow-2xl">
+        <header className="text-center mb-8">
+          <h1 className="text-3xl font-extrabold text-gray-900">KeyCrafter</h1>
+          <p className="text-gray-600 mt-2">Generate secure passwords with ease</p>
+        </header>
+
+        <PasswordGenerator />
+      </section>
+    </div>
+  );
 }
 
-export default App
+export default App;
