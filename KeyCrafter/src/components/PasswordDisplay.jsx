@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import toast, { Toaster } from 'react-hot-toast'
 import { useState } from "react";
 

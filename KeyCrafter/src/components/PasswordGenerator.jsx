@@ -9,22 +9,36 @@ function PasswordGenerator() {
   const [passwordLength, setPasswordLength] = useState(12)
   const [password, setPassword] = useState('')
 
+  //Character Options Props
+  const [characters, setCharacters] = useState({ uppercase: true, lowercase: true, numbers: true, symbols: true })
+
   function generatePassword() {
     // Character Variables
-    let lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lowercase = "abcdefghijklmnopqrstuvwxyz";
+    let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let numbers = "0123456789";
     let symbols = "!@#$%^&*()";
 
 
     //Function Variables
-    let charPool = 'abcdefghijklmnopqrstuvwxyz'
+    let charPool = ''
     let password = ''
 
     //Generation Disable Check - Future Use
 
 
     // Character Pool Creation / Strength Count - Future Use 
+    if (characters.lowercase === true) {
+      charPool += lowercase
+    } if (characters.uppercase === true) {
+      charPool += uppercase
+    } if (characters.numbers === true) {
+      charPool += numbers
+    } if (characters.symbols === true) {
+      charPool += symbols
+    }
+    // Dedubg CharPool
+    // console.log(charPool)
 
 
     // Password Generation Statement
@@ -34,7 +48,8 @@ function PasswordGenerator() {
       password += charPool[Math.floor(Math.random() * charPool.length)]
     }
     // Debug Logs
-    console.log(password)
+    // console.log(password)
+
     // Set State Changes - Future Use
     setPassword(password)
 

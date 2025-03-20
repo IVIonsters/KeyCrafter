@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import react, { useState } from 'react';
+
 
 function CheckboxGroup() {
   return (
