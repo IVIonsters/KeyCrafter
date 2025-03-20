@@ -20,7 +20,6 @@ function PasswordGenerator() {
     //Function Variables
     let charPool = 'abcdefghijklmnopqrstuvwxyz'
     let password = ''
-    let passwordLength = '12'
 
     //Generation Disable Check - Future Use
 
@@ -72,7 +71,7 @@ function PasswordGenerator() {
           <input
             type="range"
             min="4"
-            max="64"
+            max="32"
             value={passwordLength}
             onChange={(e) => setPasswordLength(e.target.value)}
             id="passwordLength"
@@ -81,7 +80,7 @@ function PasswordGenerator() {
 
           <div className="flex justify-between text-xs text-gray-500 mt-1">
             <span>4</span>
-            <span>64</span>
+            <span>32</span>
           </div>
         </div>
 

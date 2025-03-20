@@ -1,15 +1,47 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import toast, { Toaster } from 'react-hot-toast'
 import { useState } from "react";
 
 
 function PasswordDisplay({ displayPassword }) {
 
+  // toast notifications
+  const passwordCopied = () => toast('Password Copied To Clipboard');
+
+  //Show / Hide State
+  const [show, setShow] = useState('text')
+
+  //handler for show state
+  const handlePasswordDisplay = () => {
+    if (show === 'text') {
+      setShow('password')
+    } else {
+      setShow('text')
+    }
+  }
+
+  // Copy password 
+  const copyPassword = () => navigator.clipboard.writeText(displayPassword)
+    .then(() => {
+      // alert('Text Copied To Clipboard')
+      console.log('Text Copied To clipboard ')
+    })
+    .catch(err => {
+      console.error('Failed to Copy Text', err)
+    })
+
+  // Multiple onClick Handler
+  const handleClick = () => {
+    copyPassword();
+    passwordCopied();
+  }
+
   return (
     <div className="space-y-3">
       <div className="relative">
         <input
-          type="text"
+          type={show}
           id="password"
           readOnly
           placeholder="your secure password"
@@ -17,40 +49,28 @@ function PasswordDisplay({ displayPassword }) {
           className="w-full p-4 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 font-mono text-base focus:outline-none focus:ring-2 focus:ring-teal-400"
         />
 
-        <button
-          id="toggleVisibility"
-          className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700"
-          aria-label="Toggle password visibility"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+        <div className="absolute inset-y-0 right-3 flex items-center">
+          <label className="inline-flex relative items-center cursor-pointer">
+            <input
+              type="checkbox"
+              className="sr-only peer"
+              checked={show === 'text'}
+              onChange={handlePasswordDisplay}
             />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-            />
-          </svg>
-        </button>
+            <div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-500"></div>
+            <span className="ml-2 text-xs text-gray-600">Show</span>
+          </label>
+        </div>
       </div>
 
       <button
         id="copyBtn"
         className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none transition-all duration-300"
+        onClick={handleClick}
       >
         Copy to Clipboard
       </button>
+      <Toaster />
     </div>
   );
 }
