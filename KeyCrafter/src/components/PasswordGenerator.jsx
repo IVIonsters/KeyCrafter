@@ -12,6 +12,11 @@ function PasswordGenerator() {
   //Character Options Props
   const [characters, setCharacters] = useState({ uppercase: true, lowercase: true, numbers: true, symbols: true })
 
+  // Character Options Handler
+  const handleCharacterChange = (newCharacters) => {
+    setCharacters(newCharacters)
+  }
+
   function generatePassword() {
     // Character Variables
     let lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -25,7 +30,8 @@ function PasswordGenerator() {
     let password = ''
 
     //Generation Disable Check - Future Use
-
+    const isAnyOptionSelected = characters.uppercase || characters.lowercase ||
+      characters.numbers || characters.symbols;
 
     // Character Pool Creation / Strength Count - Future Use 
     if (characters.lowercase === true) {
@@ -102,7 +108,10 @@ function PasswordGenerator() {
         {/* Character Options */}
         <div>
           <h3 className="text-sm font-medium text-gray-700 mb-2">Character Types</h3>
-          <CheckboxGroup />
+          <CheckboxGroup
+            options={characters}
+            onCharacterChange={handleCharacterChange}
+          />
         </div>
 
         {/* Generate Button */}
