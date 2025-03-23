@@ -17,6 +17,7 @@ function PasswordGenerator() {
     setCharacters(newCharacters)
   }
 
+
   function generatePassword() {
     // Character Variables
     let lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -29,9 +30,7 @@ function PasswordGenerator() {
     let charPool = ''
     let password = ''
 
-    //Generation Disable Check - Future Use
-    const isAnyOptionSelected = characters.uppercase || characters.lowercase ||
-      characters.numbers || characters.symbols;
+
 
     // Character Pool Creation / Strength Count - Future Use 
     if (characters.lowercase === true) {
@@ -60,6 +59,10 @@ function PasswordGenerator() {
     setPassword(password)
 
   }
+
+  //Generation Disable Check
+  const isNoOptionSelected = !characters.uppercase && !characters.lowercase &&
+    !characters.numbers && !characters.symbols;
 
   return (
     <div className="w-full max-w-md mx-auto flex flex-col gap-6">
@@ -117,7 +120,8 @@ function PasswordGenerator() {
         {/* Generate Button */}
         <button
           onClick={generatePassword}
-          className="w-full py-3 px-4 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-400 focus:outline-none transition-all duration-300"
+          disabled={isNoOptionSelected}
+          className={`w-full py-3 px-4 ${isNoOptionSelected ? 'bg-gray-300 cursor-not-allowed' : 'bg-emerald-300 hover:bg-emerald-400 cursor-pointer'} text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-400 focus:outline-none transition-all duration-300`}
         >
           Generate Password
         </button>

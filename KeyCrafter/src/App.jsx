@@ -17,3 +17,8 @@ function App() {
 }
 
 export default App;
+/* Features Still Needed
+Disabled Generate Button
+Password Strength Display
+Password Strength Colors and words
+ */
