@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import PasswordDisplay from './PasswordDisplay';
 import StrengthBar from './StrengthBar';
 import CheckboxGroup from './CheckboxGroup';
@@ -12,11 +11,34 @@ function PasswordGenerator() {
   //Character Options Props
   const [characters, setCharacters] = useState({ uppercase: true, lowercase: true, numbers: true, symbols: true })
 
+  //Strength State
+  const [strength, setStrength] = useState('')
+  const [characterCount, setCharacterCount] = useState('')
+
   // Character Options Handler
   const handleCharacterChange = (newCharacters) => {
     setCharacters(newCharacters)
   }
 
+  // Strength Handler
+  const strengthValue = useCallback(() => {
+    if (passwordLength <= 12 && characterCount <= 2) {
+      setStrength('weak')
+    } else if (passwordLength >= 16 && characterCount >= 3) {
+      setStrength('strong')
+    } else {
+      setStrength('medium')
+    }
+    // console.log(characterCount)
+    return strength
+  }, [passwordLength, characterCount, strength])
+
+  //characterCount Hook
+  useEffect(() => {
+    if (characterCount !== '') {
+      strengthValue();
+    }
+  }, [characterCount, strengthValue])
 
   function generatePassword() {
     // Character Variables
@@ -29,22 +51,23 @@ function PasswordGenerator() {
     //Function Variables
     let charPool = ''
     let password = ''
-
+    let count = 0
 
 
     // Character Pool Creation / Strength Count - Future Use 
     if (characters.lowercase === true) {
       charPool += lowercase
+      count++
     } if (characters.uppercase === true) {
       charPool += uppercase
+      count++
     } if (characters.numbers === true) {
       charPool += numbers
+      count++
     } if (characters.symbols === true) {
       charPool += symbols
+      count++
     }
-    // Dedubg CharPool
-    // console.log(charPool)
-
 
     // Password Generation Statement
     if (passwordLength < 6) {
@@ -52,12 +75,9 @@ function PasswordGenerator() {
     } while (password.length < passwordLength) {
       password += charPool[Math.floor(Math.random() * charPool.length)]
     }
-    // Debug Logs
-    // console.log(password)
-
     // Set State Changes - Future Use
     setPassword(password)
-
+    setCharacterCount(count)
   }
 
   //Generation Disable Check
@@ -74,7 +94,9 @@ function PasswordGenerator() {
 
       {/* Strength Indicator */}
       <div className="w-full">
-        <StrengthBar />
+        <StrengthBar
+          strengthValue={strength}
+        />
       </div>
 
       {/* Options Section */}
