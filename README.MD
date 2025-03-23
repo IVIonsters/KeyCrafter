@@ -33,7 +33,7 @@ KeyCrafter is a modern password generator built with React, designed to create s
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/KeyCrafter.git
+git clone https://github.com/IVIonsters/KeyCrafter.git
 
 # Navigate to the project directory
 cd KeyCrafter
