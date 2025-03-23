@@ -17,6 +17,7 @@ KeyCrafter is a modern password generator built with React, designed to create s
 ## **Features**
 
 - **Modern React-based UI** with responsive design for both mobile and desktop devices
+- **Dark and light mode** with automatic system preference detection
 - **Real-time password generation** based on user preferences
 - **Customizable password options** including:
   - Uppercase letters
@@ -58,7 +59,7 @@ npm run dev
 
 - ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) - Frontend library for building the user interface
 - ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) - Next-generation frontend tooling
-- ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) - Utility-first CSS framework
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white) - Utility-first CSS framework with dark mode support
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) - Programming language
 - ![React Hot Toast](https://img.shields.io/badge/React%20Hot%20Toast-FF4154?style=for-the-badge&logo=react&logoColor=white) - Notification library
 
@@ -91,7 +92,6 @@ KeyCrafter/
 - Implement password saving with local storage
 - Add accessibility features
 - Support for generating passphrase-style passwords
-- Add dark/light theme toggle
 
 ## **License**
 

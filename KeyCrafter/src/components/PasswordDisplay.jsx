@@ -45,7 +45,7 @@ function PasswordDisplay({ displayPassword }) {
           readOnly
           placeholder="your secure password"
           value={displayPassword}
-          className="w-full p-4 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 font-mono text-base focus:outline-none focus:ring-2 focus:ring-teal-400"
+          className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-100 font-mono text-base focus:outline-none focus:ring-2 focus:ring-teal-400 dark:focus:ring-teal-500"
         />
 
         <div className="absolute inset-y-0 right-3 flex items-center">
@@ -56,15 +56,15 @@ function PasswordDisplay({ displayPassword }) {
               checked={show === 'text'}
               onChange={handlePasswordDisplay}
             />
-            <div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-500"></div>
-            <span className="ml-2 text-xs text-gray-600">Show</span>
+            <div className="w-9 h-5 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-300 dark:peer-focus:ring-teal-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 dark:after:border-gray-500 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-teal-500"></div>
+            <span className="ml-2 text-xs text-gray-600 dark:text-gray-300">Show</span>
           </label>
         </div>
       </div>
 
       <button
         id="copyBtn"
-        className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none transition-all duration-300"
+        className="w-full py-2 px-4 bg-teal-500 dark:bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 dark:hover:bg-teal-700 focus:ring-2 focus:ring-teal-400 dark:focus:ring-teal-500 focus:outline-none transition-all duration-300"
         onClick={handleClick}
       >
         Copy to Clipboard
