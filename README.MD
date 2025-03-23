@@ -81,9 +81,9 @@ KeyCrafter/
 
 ## **Screenshots**
 
-| <img src="./images/desktop-view.png" width="400"> | <img src="./images/mobile-view.png" width="200"> |
-| :-----------------------------------------------: | :----------------------------------------------: |
-|               KeyCrafter on Desktop               |               KeyCrafter on Mobile               |
+| <img src="./images/desktopView.png" width="400"> | <img src="./images/iPhone16.png" width="200"> | <img src="./images/iPhone16Toast.png" width="200"> |
+| :----------------------------------------------: | :-------------------------------------------: | :------------------------------------------------: |
+|              KeyCrafter on Desktop               |             KeyCrafter on iPhone              |           KeyCrafter Toast Notifications           |
 
 ## **Future Improvements**
 
